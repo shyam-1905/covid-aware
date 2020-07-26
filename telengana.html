@@ -1,0 +1,128 @@
+<style>
+h1{
+	position: absolute;
+	left: 20px;
+	top: 30px;
+
+}
+
+ #title span{
+	font-size: 20px;
+	position: absolute;
+	top: 140px;
+	left: 30px;
+}
+
+#holder{
+	width:100%;
+	height:70%;
+	background:#333;
+	position: absolute;
+	top: 30%;
+	left: 0;
+	z-index: 0;
+}
+
+#thing{
+	width:20%;
+	height:60%;
+	background:white;
+	position: relative;
+	float: left;
+	top:10%;
+	left: 12%;
+	margin:2%;
+	z-index: 1;
+}
+
+#thing:hover{
+	background:yellow;
+}
+
+#pop1{
+	width:97%;
+	height:90%;
+	background: black;
+	z-index: 100;
+    left:1%;
+	position: absolute;
+   top:-100%;
+}
+
+#title{
+	z-index: -100;
+}
+
+#close{
+	width: 100px;
+	
+	color: white;
+	position: absolute;
+	right: 1%;
+	font-size: 20px;
+	bottom: 2%;
+	cursor: pointer;
+}
+#close:hover{
+	color: red;
+}
+
+#hospitals{
+	width:25%;
+	height:70%;
+	background:red;
+	float: left;
+	position: relative;
+	top: 20%;
+	left: 10%;
+	margin:1%;
+	text-align: center;
+}
+#pop1 #hospitals span{
+
+	font-size: 20px;
+	position: relative;
+	top: 10px;
+	left: 10px;
+
+}
+
+</style>
+<script type="text/javascript">
+	value = 0;
+	function pop1(){
+ var pop   = document.getElementById("pop1");
+ if(value % 2 == 0){
+pop.style.top = -(window.innerHeight);
+ }else{
+ pop.style.top = 0;
+}	
+value++;
+}
+</script>
+<div id="pop1">
+	<div id="hospitals"><h2>Apollo</h2>
+		<span>there is nothing here </br></span>
+		<span>there is nothing here </br></span>
+		</div>
+	<div id="hospitals"><h2>Osmania</h2></div>
+	<div id="hospitals"><h2>Gandhi </h2></div>
+	<div id="close" onclick="pop1();">Close</div>
+</div>
+<div id="title">
+
+<h1>Telengana</h1>
+<span>
+	Cases in telengana have been rising at an alarming rate lately , it's best to stay at home and stay healthy 
+</span>
+
+</div>
+<div id="holder">
+<div id="thing"  onclick="pop1()">
+	<h1>Hospitals</h1>
+</div>
+
+<div id="thing"><h1> Corona  cases<h1></div>
+
+<div id="thing"><h1>Precautions<h1></div>
+</div>
